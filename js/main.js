@@ -2,6 +2,7 @@ $(document).ready(function() {
   window.conduct = "Intentional";
   window.impact = "Severe";
   window.contact = "High";
+  window.goodbloke = 0;
 
   checkmrp();
 });
@@ -9,12 +10,30 @@ $(document).ready(function() {
 $("input").click(function() {
   var $input = $(this);
   if ( $input.attr('name') === "conduct" ) {
+    if ( $input.attr('value') === "Intentional" ) {
+      window.goodbloke++;
+    }
+    else {
+      window.goodbloke = 0;
+    }
     window.conduct = $input.attr('value');
   }
   else if ( $input.attr('name') === "impact" ) {
+    if ( $input.attr('value') === "Severe" ) {
+      window.goodbloke++;
+    }
+    else {
+      window.goodbloke = 0;
+    }
     window.impact = $input.attr('value');
   }
   else if ( $input.attr('name') === "contact" ) {
+    if ( $input.attr('value') === "High" ) {
+      window.goodbloke++;
+    }
+    else {
+      window.goodbloke = 0;
+    }
     window.contact = $input.attr('value');
   }
 
@@ -27,6 +46,15 @@ function checkmrp() {
   }
   var $base;
   var $plea;
+
+  if (window.goodbloke >= 9) {
+    $base = "Look, he's a really good bloke";
+    $plea = "Maybe just a fine, I'm sure he's going through a lot.";
+    $(".baseSanction").text($base);
+    $(".pleaSanction").text($plea);
+    return;
+  }
+
   if (window.conduct === "Intentional") {
     if (window.impact === "Severe") {
       $base = "Tribunal";
