@@ -63,7 +63,7 @@ function checkmrp() {
   var $base;
   var $plea;
 
-  if (window.goodbloke >= 9) {
+  if (window.goodbloke >= 4) {
     $base = "Look, he's a really good bloke";
     $plea = "Maybe just a fine, I'm sure he's going through a lot.";
     $(".baseSanction").text($base);
