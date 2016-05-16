@@ -4,7 +4,23 @@ $(document).ready(function() {
   window.contact = "High";
   window.goodbloke = 0;
 
+  if ($(window).width() < 400) {
+    $(".labelMed").text("Med");
+  }
+
   checkmrp();
+});
+
+$(function(){
+  $(window).resize(function(){
+    if($(this).width() < 400){
+      $(".labelMed").text("Med");
+    }
+    else {
+      $(".labelMed").text("Medium");
+    }
+  })
+  .resize();//trigger resize on page load
 });
 
 $("input").click(function() {
