@@ -120,6 +120,10 @@ h2 {
   line-height: 3em;
 }
 
+.badRecord {
+    font-size: 0.85em;
+}
+
 .disclaimer {
     font-size: 0.75em;
 }
