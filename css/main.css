@@ -128,10 +128,10 @@ h2 {
     font-size: 0.75em;
 }
 
-a {
-
+.baseSanction,
+.pleaSanction {
+    font-weight: 400;
 }
-
 
 
 
