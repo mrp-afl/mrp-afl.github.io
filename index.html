@@ -6,7 +6,7 @@
   <title>AFL Match Review Panel Calculator</title>
   <meta name="description" content="A quick calculator to let you see what likely sanction will apply to an illegal hit in the Australian Football League.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
@@ -78,7 +78,7 @@
             ltr = coded.charAt(i)
             link += (ltr)
           }
-          else {     
+          else {
             ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
             link += (key.charAt(ltr))
           }
