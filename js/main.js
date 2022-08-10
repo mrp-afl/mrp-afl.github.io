@@ -69,7 +69,7 @@ function checkmrp() {
 
   if (window.conduct === "Intentional") {
     if (window.impact === "Severe") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "Tribunal (4+ Matches)";
       }
       else if (window.contact === "Body") {
@@ -77,7 +77,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "High") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "3 Matches";
       }
       else if (window.contact === "Body") {
@@ -85,7 +85,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "Medium") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "2 Matches";
       }
       else if (window.contact === "Body") {
@@ -93,7 +93,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "Low") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "1 Match";;
       }
       else if (window.contact === "Body") {
@@ -103,7 +103,7 @@ function checkmrp() {
   }
   else if (window.conduct === "Careless") {
     if (window.impact === "Severe") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "Tribunal (3+ Matches)";
       }
       else if (window.contact === "Body") {
@@ -111,7 +111,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "High") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "2 Matches";
       }
       else if (window.contact === "Body") {
@@ -119,7 +119,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "Medium") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "1 Match";;
       }
       else if (window.contact === "Body") {
@@ -127,7 +127,7 @@ function checkmrp() {
       }
     }
     else if (window.impact === "Low") {
-      if (window.contact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "Fine";
       }
       else if (window.contact === "Body") {
