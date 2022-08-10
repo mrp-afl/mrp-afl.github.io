@@ -59,90 +59,82 @@ function checkmrp() {
     return;
   }
   var $base;
-  var $plea;
 
   if (window.goodbloke >= 4) {
-    $base = "Look, he's a really good bloke";
-    $plea = "Maybe just a fine, I'm sure he's going through a lot.";
+    $base = "Look, he's a really good bloke. Maybe just a fine, I'm sure he's going through a lot.";
     $(".baseSanction").text($base);
-    $(".pleaSanction").text($plea);
     //no point doing the rest, he's a good bloke.
     return;
   }
 
   if (window.conduct === "Intentional") {
     if (window.impact === "Severe") {
-      $base = "Tribunal";
-      $plea = "n/a";
-    }
-    else if (window.impact === "High") {
-      if (window.contact === "High") {
-        $base = "Tribunal";
-        $plea = "n/a";
+      if (window.contact === "High / Groin") {
+        $base = "Tribunal (4+ Matches)";
       }
       else if (window.contact === "Body") {
-        $base = "3 Matches";
-        $plea = "2 Matches";
+        $base = "Tribunal (3+ Matches)";
       }
     }
-    else if (window.impact === "Medium") {
-      if (window.contact === "High") {
-        $base = "3 Matches";;
-        $plea = "2 Matches";;
+    else if (window.impact === "High") {
+      if (window.contact === "High / Groin") {
+        $base = "3 Matches";
       }
       else if (window.contact === "Body") {
         $base = "2 Matches";
-        $plea = "1 Matches";
+      }
+    }
+    else if (window.impact === "Medium") {
+      if (window.contact === "High / Groin") {
+        $base = "2 Matches";
+      }
+      else if (window.contact === "Body") {
+        $base = "1 Match";
       }
     }
     else if (window.impact === "Low") {
-      if (window.contact === "High") {
-        $base = "2 Matches";;
-        $plea = "1 Matches";;
+      if (window.contact === "High / Groin") {
+        $base = "1 Match";;
       }
       else if (window.contact === "Body") {
-        $base = "$1500";
-        $plea = "$1000";
+        $base = "Fine";
       }
     }
   }
   else if (window.conduct === "Careless") {
     if (window.impact === "Severe") {
-      $base = "Tribunal";
-      $plea = "n/a";
-    }
-    else if (window.impact === "High") {
-      if (window.contact === "High") {
-        $base = "3 Matches";
-        $plea = "2 Matches";
+      if (window.contact === "High / Groin") {
+        $base = "Tribunal (3+ Matches)";
       }
       else if (window.contact === "Body") {
+        $base = "Tribunal (2+ Matches)";
+      }
+    }
+    else if (window.impact === "High") {
+      if (window.contact === "High / Groin") {
         $base = "2 Matches";
-        $plea = "1 Matches";
+      }
+      else if (window.contact === "Body") {
+        $base = "1 Match";
       }
     }
     else if (window.impact === "Medium") {
-      if (window.contact === "High") {
-        $base = "2 Matches";;
-        $plea = "1 Matches";;
+      if (window.contact === "High / Groin") {
+        $base = "1 Match";;
       }
       else if (window.contact === "Body") {
-        $base = "$1500";
-        $plea = "$1000";
+        $base = "Fine";
       }
     }
     else if (window.impact === "Low") {
-      if (window.contact === "High") {
-        $base = "$1500";
-        $plea = "$1000";
+      if (window.contact === "High / Groin") {
+        $base = "Fine";
       }
       else if (window.contact === "Body") {
-        $base = "$1500";
-        $plea = "$1000";
+        $base = "Fine";
       }
     }
   }
 
   $(".baseSanction").text($base);
-  $(".pleaSanction").text($plea);
 }
